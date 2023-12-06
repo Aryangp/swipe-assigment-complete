@@ -22,6 +22,7 @@ const InvoiceList = () => {
       navigate(`/create/${copyId}`);
     }
   };
+  console.log(invoiceList)
 
   return (
     <Row>
@@ -32,7 +33,7 @@ const InvoiceList = () => {
             <div className="d-flex flex-column align-items-center">
               <h3 className="fw-bold pb-2 pb-md-4">No invoices present</h3>
               <Link to="/create">
-                <Button variant="primary">Create Invoice</Button>
+                <Button variant="primary mb-2 mb-md-4">Create Invoice</Button>
               </Link>
             </div>
           ) : (
@@ -42,6 +43,12 @@ const InvoiceList = () => {
                 <Link to="/create">
                   <Button variant="primary mb-2 mb-md-4">Create Invoice</Button>
                 </Link>
+
+                  <div className="d-flex gap-2">
+                    <Link to="/edit/inbulk">
+                      <Button variant="dark mb-2 mb-md-4" >Edit Invoice</Button>
+                   </Link>
+                </div>
 
                 <div className="d-flex gap-2">
                   <Button variant="dark mb-2 mb-md-4" onClick={handleCopyClick}>
