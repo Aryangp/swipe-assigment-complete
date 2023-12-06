@@ -6,8 +6,8 @@ import "./cssStyles/style.css";
 import { useInvoiceListData } from "../redux/hooks";
 
 const TableFormat = ({ options, rowData, setRowData }) => {
-  const { invoiceList, getOneInvoice } = useInvoiceListData();
-  const [columnDefs, setColumnDefs] = useState([
+  const { invoiceList } = useInvoiceListData();
+  const [columnDefs] = useState([
     { field: "id", minWidth: 170 },
     { field: "billFrom" },
     { field: "billFromEmail" },

@@ -30,7 +30,7 @@ const dummydata = [
 
 const EditBulk = () => {
     const dispatch= useDispatch();
-    const [selectedValue, setSelectedValue] = useState([]);
+    const [selectedValue] = useState([]);
     const { invoiceList} = useInvoiceListData();
     const [rowData, setRowData] = useState([]);
    
@@ -39,6 +39,7 @@ const EditBulk = () => {
             try {
                 rowData.map((invoice) => {
                     dispatch(updateInvoice({ id: invoice.id, updatedInvoice: invoice }));
+                    return null
                 })
                 alert("Invoice updated successfuly 🥳");   
                 console.log(invoiceList,"updated invoice")
