@@ -19,3 +19,8 @@ npm install
  npm start
 ```
 - The site will be running on the http://localhost:3000
+### Video walk through of The App
+
+
+https://github.com/Aryangp/swipe-assigment-complete/assets/91003905/32361b00-c92a-438a-9970-3bae9ca4efe0
+
